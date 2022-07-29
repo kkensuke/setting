@@ -231,7 +231,7 @@ jbg(){
 ## Latex ##
 # make latex template directory
 mklt(){
-	cp -r ~/latex-template ./$1
+	cp -r ~/.latex-template ./$1
 }
 
 ## ref: https://github.com/mathiasbynens/dotfiles/blob/main
