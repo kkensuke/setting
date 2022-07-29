@@ -1,0 +1,166 @@
+\usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
+\usepackage[dvipdfmx]{graphicx,hyperref,color}
+\usepackage{amsmath,amssymb,braket,bm,mathtools,amsfonts,url, cancel, mathrsfs}
+\usepackage{ascmac}% to use itembox
+\usepackage{algorithm,algorithmic}
+%\usepackage[cache=false]{minted}
+\usepackage{physics}
+\usepackage{tikz}% quantum circuit
+\usepackage{comment}
+\usepackage{here}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black
+}
+
+% number figures, tables and equations within the sections
+\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+% Omit `.0` in equation numbers for non-existent subsections.
+% \renewcommand*{\theequation}{%
+%   \ifnum\value{subsection}=0 %
+%     \thesection
+%   \else
+%     \thesubsection
+%   \fi
+%   .\arabic{equation}%
+% }
+
+\renewcommand{\baselinestretch}{1.25}
+
+\newtheoremstyle{mystyle}%   % スタイル名
+    {3pt}%b                  % 上部スペース
+    {3pt}%                   % 下部スペース
+    {}%                      % 本文フォント
+    {12pt}%                      % 1行目のインデント量
+    {\bfseries}%             % 見出しフォント
+    {.}%                     % 見出し後の句読点
+    {\newline}%              % 見出し後のスペース
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}
+
+\theoremstyle{mystyle}
+\newtheorem{definition}{Definition}[section]
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}{Lemma}
+
+
+% Latin abbreviations
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\cf}{\textit{c.f.}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\etc}{\textit{etc.}}
+
+% log type
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\div}{div}
+\DeclareMathOperator{\rot}{rot}
+% limit type
+\DeclareMathOperator*{\argmin}{arg~min}
+\DeclareMathOperator*{\argmax}{arg~max}
+
+% \mathcal
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calQ}{\mathcal{Q}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calY}{\mathcal{Y}}
+\newcommand{\calZ}{\mathcal{Z}}
+
+% mathbb
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+% mathrm
+\newcommand{\NOT}{\mathrm{NOT}}
+\newcommand{\AND}{\mathrm{AND}}
+\newcommand{\NAND}{\mathrm{NAND}}
+\newcommand{\OR}{\mathrm{OR}}
+\newcommand{\XOR}{\mathrm{XOR}}
+\newcommand{\CNOT}{\mathrm{CNOT}}
+\newcommand{\Tof}{\mathrm{Toffoli}}
+
+% matrix
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+% sin cos
+\newcommand{\sif}[2]{\sin\qty(\frac{#1}{#2})}
+\newcommand{\cof}[2]{\cos\qty(\frac{#1}{#2})}
+\newcommand{\siff}[3]{\sin^{#1}\qty(\frac{#2}{#3})}
+\newcommand{\coff}[3]{\cos^{#1}\qty(\frac{#2}{#3})}
+
+\newcommand{\paulix}{\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} }
+\newcommand{\pauliy}{\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} }
+\newcommand{\pauliz}{\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} }
+
+\newcommand{\rx}[1]{ \cos \frac{#1}{2} & -\sin\frac{#1}{2}  \\ \sin \frac{#1}{2}  & \cos\frac{#1}{2}}
+\newcommand{\ry}[1]{ \cos \frac{#1}{2} & -i\sin\frac{#1}{2} \\ i\sin \frac{#1}{2} & \cos\frac{#1}{2}}
+\newcommand{\rz}[1]{ \exp -i{#1}/2      & 0                  \\ 0                 & \exp i{#1}/2    }
+\newcommand{\rot}[1]{ \cos {#1} & -\sin {#1} \\ \sin {#1} & \cos {#1}}
+
+% others
+\newcommand{\pure}[1]{|{#1}\rangle\langle{#1}|}
+
+\newcommand{\combi}[2]{{}_{#1}\text{C}_{#2}}

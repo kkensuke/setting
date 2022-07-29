@@ -1,0 +1,52 @@
+
+# ==== Emojis ====
+# 🎉 :tada:Initial commit             - initial commit
+# ✨ :sparkles:New                    — to introduce a new feature(s).
+# 👌 :ok_hand:Improve                 — to improve an existing code/feature (with no breaking changes).
+# 🐛 :bug:Fix                         — to fix a code bug.
+# 🍎 :apple:Fix on MacOS              -
+# 🐧 :penguin:Fix on Linux            -
+# 🏁 :checkered_flag:Fix on Windows   -
+# 🚑 :ambulance:Hotfix                -
+# 🚧 :construction:In progress        -
+# 📚 :books:Docs                      — to add new documentation.
+# 🔧 :wrench:Maintain                 — to make minor changes (like fixing typos) which should not appear in a changelog.
+# 💥 :boom:Breaking                   — to introduce a back-incompatible change(s) (and/or remove deprecated code).
+# 🧪 :test_tube:Test                  — to add additional testing only.
+# 🚀 :rocket:Release                  — to bump the package version for release.
+# ⬆️ :arrow_up:Upgrade                — for upgrading a dependency pinning.
+# ♻️ :recycle:Refactor                — for refactoring existing code (with no specific improvements).
+# 🗑️ :wastebasket:Deprecate           — mark some code as deprecated (for removal in a later release).
+#                                       The future version when it will be removed should also be specified, 
+#                                       and (if applicable) what will replace it.
+# 🔀 Merge:twisted_rightwards_arrows: — for a merge commit (then all commits within the merge should be categorised)
+# 👮 Security:cop:                    - security-related improvements
+# ♿  Accessibility:wheelchair:        -
+# ❓ Other:question:                  — anything not covered above (use as a last resort!).
+# 📦 .json in JS:package:             -
+# 🐳 Docker:whale:                    -
+
+# ==== Write below ====
+# Title: Summary, imperative, start upper case, don't end with a period
+# Format ':emoji: Subject #issue No.'
+# |<----   Preferably using up to 50 chars   --->|<------------------->|
+
+# Remember blank line between title and body.
+
+# (Optional) Body: Explain *what* and *why* (not *how*).
+# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+
+
+# At the end: Include Co-authored-by for all contributors. 
+# Include at least one empty line before it. Format: 
+# Co-authored-by: name <user@users.noreply.github.com>
+#
+# 1.Separate subject from body with a blank line
+# 2. Limit the subject line to 50 characters
+# 3. Capitalize the subject line
+# 4. Do not end the subject line with a period
+# 5. Use the imperative mood in the subject line
+# 6. Wrap the body at 72 characters
+# 7. Use the body to explain what and why vs. how
+# See https://chris.beams.io/posts/git-commit/
+#     https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733

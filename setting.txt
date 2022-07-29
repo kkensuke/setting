@@ -1,0 +1,65 @@
+## .DS_store ##
+
+sudo find / -name ".DS_Store" -delete
+
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
+# shor all files including dotfiles
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+
+## Screenshot setting ##
+
+defaults write com.apple.screencapture name "screenshot"
+defaults write com.apple.screencapture include-date -bool false
+defaults write com.apple.screencapture disable-shadow -bool False
+defaults write com.apple.screencapture showsCursor -bool true
+
+defaults write com.apple.screencapture type png
+# jpg, gif, pdf, tiff, bmp
+
+defaults write com.apple.screencapture location ~/Desktop/
+defaults read com.apple.screencapture location
+defaults delete com.apple.screencapture location
+
+# See all the settings about screenshots
+defaults read com.apple.screencapture
+
+
+# set coteditor as default editor for any .txt file (default; com.apple.TextEdit)
+defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.coteditor.CotEditor;}'
+
+
+## Homebrew ##
+
+# install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+
+brew install zsh-completions
+brew install zsh-autosuggestions
+brew install zsh-git-prompt
+
+
+## GitHub ##
+
+# GitHub CLI
+**register alias**
+gh alias set repo-delete 'api -X DELETE "repos/$1"'
+gh auth refresh -h github.com -s delete_repo
+
+**usage (WARNING: no confirmation!)**
+gh repo-delete user/myrepo
+
+**comfirm**
+gh alias list
+
+
+## others ##
+
+# make .ipynb from .md
+for i in *.md; do touch ./${i%.*}.ipynb; done
+
+
+## setopt
+
+setopt autocd
