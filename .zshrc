@@ -83,6 +83,7 @@ alias sz='source ~/.zshrc'
 # open apps
 alias now='open .'
 alias c='open /Applications/CotEditor.app'
+alias vs='code'
 alias z='s;open /Applications/CotEditor.app .zshrc'
 alias opjb='gj;open /Applications/Firefox.app _build/html/index.html'
 alias firefox='open /Applications/Firefox.app'
